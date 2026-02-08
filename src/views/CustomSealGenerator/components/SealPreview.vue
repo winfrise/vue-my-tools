@@ -2,7 +2,7 @@
 <template>
   <el-card>
     <canvas ref="externalImageCanvasRef" width="300" height="300" class="external-image-canvas"></canvas>
-    <canvas ref="sealCanvasRef" width="300" height="300" class="seal-canvas"></canvas>
+    <canvas ref="sealCanvasRef" id="seal-canvas" width="300" height="300" class="seal-canvas"></canvas>
   </el-card>
 </template>
 

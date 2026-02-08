@@ -42,9 +42,6 @@ export function useSealGenerator(config, template, ctx) {
     sealNameWidthRatio,
     sealNameHeightRatio,
 
-
-    centerText = '★',
-
     verifyCode = '',
     verifyCodeFontSize,
     verifyCodeRadius,
@@ -58,17 +55,6 @@ export function useSealGenerator(config, template, ctx) {
     circleLineColor,
     circleLineRadius,
 
-    enableInnerCircleLine = false,
-    innerCircleLineWidth,
-    innerCircleLineColor,
-    innerCircleLineRadius,
-
-    enableOuterCircleLine = false,
-    outerCircleLineWidth,
-    outerCircleLineColor,
-    outerCircleLineRadius,
-    
-    externalImageConfig,
   } = config
 
   ctx.clearRect(0, 0, size, size)

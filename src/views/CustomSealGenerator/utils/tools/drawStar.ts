@@ -19,19 +19,16 @@ export function drawStar(ctx, cx, cy, options = {}) {
 
   // 默认值
   const defaultOptions = {
-    outerRadius: 25,
+    outerRadius: 35,
+    innerRadius: 35 * 0.382, // 黄金比例近似
     rotation: -Math.PI / 2,
     fillColor: 'gold',
     strokeColor: ''
   };
 
   // 合并用户传入的 options
-  const config = { ...defaultOptions, ...options };
+  const config = {...defaultOptions, ...options,  };
 
-  // 如果 innerRadius 未提供，则基于 outerRadius 计算
-  if (config.innerRadius === undefined) {
-    config.innerRadius = config.outerRadius * 0.382; // 黄金比例近似
-  }
 
   // 如果 cx/cy 未传，自动居中
   const finalCx = cx !== undefined ? cx : ctx.canvas.width / 2;

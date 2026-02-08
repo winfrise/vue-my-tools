@@ -116,16 +116,6 @@ const config = ref({
   circleLineRadius: 125,
   circleLineColor: '',
 
-  enableOuterCircleLineWidth: false,
-  outerCircleLineWidth: 1,
-  outerCircleLineRadius: 130,
-  outerCircleLineColor: '',
-
-  enableInnerCircleLine: false,
-  innerCircleLineWidth: 1,
-  innerCircleLineRadius: 110,
-  innerCircleLineColor: '',
-
   debugConfig: {
     debugShowCenterPoint: false,    // 显示中心点
     debugShowCenterLines: false,    // 显示横竖中心线
@@ -154,7 +144,7 @@ function handleTemplateSelected(templateKey) {
 
 
 function download() {
-  const canvas = document.querySelector('canvas')
+  const canvas = document.querySelector('#seal-canvas')
   if (!canvas) return
   const link = document.createElement('a')
   link.download = 'seal.png'

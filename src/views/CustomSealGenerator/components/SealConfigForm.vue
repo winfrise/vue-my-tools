@@ -12,7 +12,8 @@
               <el-color-picker v-model="config.color" show-alpha 
                 :predefine="[
                   '#DC143C',
-                  '#A03030'
+                  '#A03030',
+                  '#ff0000',
                 ]" 
               />
             </el-form-item>
@@ -47,10 +48,6 @@
 
             <el-form-item label="半径">
               <el-input-number v-model="config.companyRadius" :min="8" :max="100" style="width: 100px;" />
-            </el-form-item>
-
-            <el-form-item label="颜色：">
-              <el-color-picker v-model="config.companyColor" show-alpha  />
             </el-form-item>
 
             <el-form-item label="字体">
@@ -106,10 +103,6 @@
             </el-form-item>
 
 
-            <el-form-item label="颜色：">
-              <el-color-picker v-model="config.sealNameColor" show-alpha  />
-            </el-form-item>
-
 
             <el-form-item label="字体">
               <el-select v-model="config.sealNameFontFamily"  style="width: 80px;">
@@ -148,7 +141,7 @@
           <el-divider border-style="dotted" />
 
           <div>
-            <el-form-item label="中心内容：">
+            <el-form-item label="五角星：">
               <el-input v-model="config.centerText" placeholder="如：★" />
             </el-form-item>
           </div>
@@ -162,9 +155,6 @@
               <el-input-number v-model="config.verifyCodeRadius" :min="8"  style="width: 100px;" />
             </el-form-item>
 
-            <el-form-item label="颜色：">
-              <el-color-picker v-model="config.verifyCodeColor" show-alpha  />
-            </el-form-item>
 
             <el-form-item label="字体">
               <el-select v-model="config.verifyCodeFontFamily"  style="width: 80px;">
@@ -206,49 +196,12 @@
               <el-input-number v-model="config.circleLineRadius" :min="8" style="width: 100px;" :disabled="!config.enableCircleLine" />
             </el-form-item>
 
-            <el-form-item label="颜色：">
-              <el-color-picker v-model="config.circleLineColor" show-alpha :disabled="!config.enableCircleLine"  />
-            </el-form-item>
           </div>
 
           <el-divider border-style="dotted" />
           
-          <div>
-            <el-form-item label="显示内边线：">
-              <el-switch v-model="config.enableInnerCircleLine" />
-            </el-form-item>
-
-            <el-form-item label="宽度：">
-              <el-input-number v-model="config.innerCircleLineWidth" :min="0" :max="10" :disabled="!config.enableInnerCircleLine" />
-            </el-form-item>
-
-            <el-form-item label="半径">
-              <el-input-number v-model="config.innerCircleLineRadius" :min="8" style="width: 100px;" :disabled="!config.enableInnerCircleLine" />
-            </el-form-item>
-
-            <el-form-item label="颜色：">
-              <el-color-picker v-model="config.innerCircleLineColor" show-alpha :disabled="!config.enableInnerCircleLine"  />
-            </el-form-item>
-          </div>
 
           <el-divider border-style="dotted" />
-
-          <div>
-            <el-form-item label="显示外边线：">
-              <el-switch v-model="config.enableOuterCircleLine" />
-            </el-form-item>
-
-            <el-form-item label="宽度：">
-              <el-input-number v-model="config.outerCircleLineWidth" :min="0" :max="10" :disabled="!config.enableOuterCircleLine" />
-            </el-form-item>
-            <el-form-item label="半径">
-              <el-input-number v-model="config.outerCircleLineRadius" :min="8"  style="width: 100px;" :disabled="!config.enableOuterCircleLine" />
-            </el-form-item>
-
-            <el-form-item label="颜色：">
-              <el-color-picker v-model="config.outerCircleLineColor" show-alpha :disabled="!config.enableOuterCircleLine"  />
-            </el-form-item>
-          </div>
         </el-form>
       </el-scrollbar>
   </el-card>
