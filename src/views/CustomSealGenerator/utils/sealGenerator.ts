@@ -104,21 +104,6 @@ export function useSealGenerator(config, template, ctx) {
   }
 
 
-    // === 1. 绘制外圆 ===
-  if (enableOuterCircleLine) {
-    drawCircle(ctx, 0, 0, outerCircleLineRadius, {
-      lineWidth: outerCircleLineWidth,
-      color: outerCircleLineColor || color,
-    })
-  }
-
-  if (enableInnerCircleLine) {
-    drawCircle(ctx, 0, 0, innerCircleLineRadius, {
-      lineWidth: innerCircleLineWidth,
-      color: innerCircleLineColor || color,
-    })
-  }
-
 
   // === 2. 绘制内圆 ===
   // if (showLines && innerLine > 0) {

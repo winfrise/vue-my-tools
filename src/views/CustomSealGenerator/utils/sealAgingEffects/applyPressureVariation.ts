@@ -1,6 +1,9 @@
 // 受力不均匀
+interface Options {
+    colors: string[]
+}
 
-export function applyPressureVariation (ctx, options) {
+export function applyPressureVariation (ctx: CanvasRenderingContext2D, options: Options, sealOptions) {
     const { colors } = options
     const canvas = ctx.canvas
     ctx.globalCompositeOperation = 'source-in';

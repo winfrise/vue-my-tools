@@ -35,6 +35,17 @@
             <el-input :model-value="getTypeLabel(effect.type)" readonly />
           </el-form-item>
 
+          <el-form-item label="效果类型">
+            <el-select v-model="effect.type">
+              <el-option
+                v-for="opt in effectOptions"
+                :key="opt.value"
+                :label="opt.label"
+                :value="opt.value"
+              />
+            </el-select>
+          </el-form-item>
+
           <!-- 边缘磨损 -->
           <template v-if="effect.type === 'edgeWear'">
             <el-form-item label="磨损强度">

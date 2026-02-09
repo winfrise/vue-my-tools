@@ -1,4 +1,9 @@
-export function applyInkInconsistent(ctx, options, w = 300, h = 300) {
+// 油墨不均效果
+interface Options {
+  intensity: number
+}
+
+export function applyInkInconsistent(ctx :CanvasRenderingContext2D, options: Options, sealOptions) {
     const { intensity } = options
   // 假设印章位于画布中心，半径为90像素
   const cx = w / 2;

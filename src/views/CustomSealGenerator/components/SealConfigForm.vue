@@ -18,11 +18,6 @@
               />
             </el-form-item>
 
-
-            <el-form-item label="印章尺寸：">
-              <el-input-number v-model="config.size" :min="100" :max="500" />
-            </el-form-item>
-
             <el-form-item label="老化程度：">
               <el-switch v-model="config.enableAging" />
               <el-input-number v-model="config.aging" :disabled="!config.enableAging" :min="0" :max="100" style="margin-left: 10px;" />
